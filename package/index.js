@@ -9,7 +9,11 @@ import PropTypes from 'prop-types'
 
 module.exports = (config = {})=>{
   if(config.lang) utils.lang = config.lang;
-  
+
+  if(config.schema) {
+    schema.state.data = config.schema
+  }
+
   const Model = moox({
     schema
   })
